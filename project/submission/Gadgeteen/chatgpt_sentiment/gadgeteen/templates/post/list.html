@@ -1,0 +1,352 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block title %}ChatGPT Sentiment Analysis{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+   
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>Proportion of targer classes</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'images/pie_chart.png' %}" alt="Pie Chart" style="width:100%">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-title">
+                    <h4>Length of post vs Sentiment Class</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'images/sentiment_length_plot.png' %}" alt="Bar Chart" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-title">
+                        <h4>Positive Sentiment Wordcloud</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="{% static 'images/positive_word_cloud.png' %}" alt="Bar Chart" style="width:100%  ">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-title">
+                        <h4>Top 10 Frequent Words</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="{% static 'images/positive_bar_plot.png' %}" alt="Bar Chart" style="width:100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-title">
+                        <h4>Negative Sentiment Wordcloud</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="{% static 'images/negative_word_cloud.png' %}" alt="Bar Chart" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-title">
+                        <h4>Top 10 Frequent Words</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="{% static 'images/negative_bar_plot.png' %}" alt="Bar Chart" style="width:100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+
+
+
+
+
+
+            <div class="col-lg-4">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="ct-pie-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card bg-primary">
+                            <div class="weather-widget">
+                                <div id="weather-one" class="weather-one p-22"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="testimonial-widget-one p-17">
+                                <div class="testimonial-widget-one owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-text">
+                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis
+                                                nostrud exercitation <i class="fa fa-quote-right"></i>
+                                            </div>
+                                            <img class="testimonial-author-img"
+                                                src="images/avatar/1.jpg" alt="" />
+                                            <div class="testimonial-author">TYRION LANNISTER</div>
+                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-text">
+                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis
+                                                nostrud exercitation <i class="fa fa-quote-right"></i>
+                                            </div>
+                                            <img class="testimonial-author-img"
+                                                src="images/avatar/1.jpg" alt="" />
+                                            <div class="testimonial-author">TYRION LANNISTER</div>
+                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-text">
+                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis
+                                                nostrud exercitation <i class="fa fa-quote-right"></i>
+                                            </div>
+                                            <img class="testimonial-author-img"
+                                                src="images/avatar/1.jpg" alt="" />
+                                            <div class="testimonial-author">TYRION LANNISTER</div>
+                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-text">
+                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis
+                                                nostrud exercitation <i class="fa fa-quote-right"></i>
+                                            </div>
+                                            <img class="testimonial-author-img"
+                                                src="images/avatar/1.jpg" alt="" />
+                                            <div class="testimonial-author">TYRION LANNISTER</div>
+                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-text">
+                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis
+                                                nostrud exercitation <i class="fa fa-quote-right"></i>
+                                            </div>
+                                            <img class="testimonial-author-img"
+                                                src="images/avatar/1.jpg" alt="" />
+                                            <div class="testimonial-author">TYRION LANNISTER</div>
+                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-text">
+                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis
+                                                nostrud exercitation <i class="fa fa-quote-right"></i>
+                                            </div>
+                                            <img class="testimonial-author-img"
+                                                src="images/avatar/1.jpg" alt="" />
+                                            <div class="testimonial-author">TYRION LANNISTER</div>
+                                            <div class="testimonial-author-position">Founder-Ceo. Dell Corp
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /# column -->
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-title pr">
+                        <h4>All Exam Result</h4>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table student-data-table m-t-20">
+                                <thead>
+                                    <tr>
+                                        <th><label><input type="checkbox" value=""></label>Exam Name</th>
+                                        <th>Subject</th>
+                                        <th>Grade Point</th>
+                                        <th>Percent Form</th>
+                                        <th>Percent Upto</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>Mathmatics</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>Mathmatics</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>English</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>Bangla</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>Mathmatics</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>English</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class Test</td>
+                                        <td>Mathmatics</td>
+                                        <td>
+                                            4.00
+                                        </td>
+                                        <td>
+                                            95.00
+                                        </td>
+                                        <td>
+                                            100
+                                        </td>
+                                        <td>20/04/2017</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /# column -->
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer">
+                    <p>2018 © Admin Board. - <a href="#">example.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
